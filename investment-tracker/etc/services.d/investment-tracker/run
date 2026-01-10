@@ -1,9 +1,9 @@
-#!/usr/bin/with-contenv bashio
-bashio::log.info "Starting Investment Tracker script..."
+#!/usr/bin/env bash
+echo "Starting Investment Tracker script..."
 
 set -e
 
-# Export environment variables from HA add-on config
+# Export all HA add-on options as environment variables
 export FINANZBLICK_USERNAME=$(bashio::config 'FINANZBLICK_USERNAME')
 export FINANZBLICK_PASSWORD=$(bashio::config 'FINANZBLICK_PASSWORD')
 export FINANZBLICK_MFA_SECRET=$(bashio::config 'FINANZBLICK_MFA_SECRET')
@@ -11,5 +11,7 @@ export ALPHAVANTAGE_API_KEY=$(bashio::config 'ALPHAVANTAGE_API_KEY')
 export SLACK_BOT_TOKEN=$(bashio::config 'SLACK_BOT_TOKEN')
 export MONGO_DB_CONNECTION_STRING=$(bashio::config 'MONGO_DB_CONNECTION_STRING')
 
-# Run your original app
+bashio::log.info "Starting Investment Tracker script..."
+
+# Run your original start script
 . /app/docker_start_script.sh

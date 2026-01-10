@@ -3,7 +3,7 @@ FROM mongo:8.2.3
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update || true && \
-	apt-get install -y --no-install-recommends curl=7.68.0-1ubuntu2.22 && \
+	apt-get install -y --no-install-recommends curl && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
 

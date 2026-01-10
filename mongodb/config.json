@@ -1,25 +1,25 @@
 {
   "name": "MongoDB",
   "description": "MongoDB NoSQL database server.",
-  "version": "8.2.3-7",
+  "version": "8.2.3-8",
   "slug": "mongodb",
   "arch": ["amd64"],
-  "map": [
-    "share:rw"
-  ],
+  "map": ["share:rw"],
   "ports": {
     "27017/tcp": 27017
   },
+  "environment": {
+    "MONGO_INITDB_ROOT_USERNAME": "#MONGO_INITDB_ROOT_USERNAME",
+    "MONGO_INITDB_ROOT_PASSWORD": "#MONGO_INITDB_ROOT_PASSWORD"
+  },
   "options": {
-    "root_username": "root",
-    "root_password": null,
-    "init_scripts": false
+    "MONGO_INITDB_ROOT_USERNAME": "root",
+    "MONGO_INITDB_ROOT_PASSWORD": null
   },
   "schema": {
-    "root_username": "str",
-    "root_password": "password",
-    "init_scripts": "bool?"
+    "MONGO_INITDB_ROOT_USERNAME": "str",
+    "MONGO_INITDB_ROOT_PASSWORD": "password"
   },
-  "startup": "services",
+  "startup": "application",
   "boot": "auto"
 }

@@ -1,17 +1,10 @@
 {
   "name": "MongoDB",
   "description": "MongoDB NoSQL database server.",
-  "version": "8.2.3-6",
+  "version": "8.2.3-7",
   "slug": "mongodb",
   "arch": ["amd64"],
   "map": [
-    {
-      "config": {
-        "source": "/share/mongodb",
-        "target": "/data/db",
-        "type": "rw"
-      }
-    },
     "share:rw"
   ],
   "ports": {

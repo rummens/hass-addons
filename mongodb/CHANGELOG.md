@@ -1,3 +1,6 @@
+### Version 8.2.3-6
+Merge remote-tracking branch 'origin/main'
+
 ### Version 8.2.3-5
 fix: force entrypoint
 

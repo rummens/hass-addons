@@ -1,4 +1,4 @@
-FROM mongo:4.4.8
+FROM mongo:8.2.3
 
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -7,7 +7,7 @@ RUN apt-get update || true && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
 
-ENV BASHIO_VERSION="0.16.2"
+ENV BASHIO_VERSION="0.17.5"
 ADD https://github.com/hassio-addons/bashio/archive/v${BASHIO_VERSION}.tar.gz /tmp/v${BASHIO_VERSION}.tar.gz
 RUN mkdir -p /tmp/bashio && \
     tar -xzf /tmp/v${BASHIO_VERSION}.tar.gz --strip 1 -C /tmp/bashio && \

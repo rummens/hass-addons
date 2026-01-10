@@ -1,12 +1,14 @@
 # MongoDB Home Assistant Addon
 
+WARNING: This is not actively maintained. Use at your own risk.
+
 ## Description
 
 This is a Home Assistant addon for running MongoDB. This addon allows you to run a MongoDB instance within your Home Assistant setup.
 
 ## Features
 
-- MongoDB version `4.4.8`
+- MongoDB version `8.2.3`
 - Supports `arm64` `amd64`
 - Secure authentication with root user and password
 - Exposes MongoDB on port `27017`

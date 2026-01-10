@@ -4,9 +4,7 @@
     "slug": "mongodb",
     "description": "A MongoDB addon for Home Assistant based on Mongo",
     "arch": [
-        "amd64",
-        "arm64v8",
-        "windows-amd64"
+        "amd64"
     ],
     "startup": "services",
     "boot": "auto",

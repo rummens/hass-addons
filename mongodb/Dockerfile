@@ -1,11 +1,10 @@
 FROM mongo:8.2.3
 
-
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update || true && \
-	apt-get install -y --no-install-recommends curl && \
-	apt-get clean && \
-	rm -rf /var/lib/apt/lists/*
+    apt-get install -y --no-install-recommends curl && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 ENV BASHIO_VERSION="0.17.5"
 ADD https://github.com/hassio-addons/bashio/archive/v${BASHIO_VERSION}.tar.gz /tmp/v${BASHIO_VERSION}.tar.gz
@@ -17,6 +16,6 @@ RUN mkdir -p /tmp/bashio && \
 
 EXPOSE 27017
 
-COPY docker-entrypoint.sh /usr/local/bin/
-RUN chmod a+x /usr/local/bin/docker-entrypoint.sh
-ENTRYPOINT [ "/usr/local/bin/docker-entrypoint.sh" ]
+# Use official MongoDB entrypoint
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["mongod", "--bind_ip_all"]

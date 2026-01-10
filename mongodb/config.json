@@ -1,33 +1,32 @@
 {
-    "name": "MongoDB",
-    "version": "8.2.3-3",
-    "slug": "mongodb",
-    "description": "A MongoDB addon for Home Assistant based on Mongo",
-    "arch": [
-        "amd64"
-    ],
-    "startup": "services",
-    "boot": "auto",
-    "options": {
-        "MONGO_INITDB_USERNAME": "homeassistant",
-        "MONGO_INITDB_PASSWORD": null,
-        "MONGO_INITDB_ROOT_PASSWORD": null
+  "name": "MongoDB",
+  "description": "MongoDB NoSQL database server.",
+  "version": "8.2.3-4",
+  "slug": "mongodb",
+  "arch": ["amd64"],
+  "map": [
+    {
+      "config": {
+        "source": "/share/mongodb",
+        "target": "/data/db",
+        "type": "rw"
+      }
     },
-    "ports": {
-        "27017/tcp": 27017
-    },
-    "schema": {
-        "MONGO_INITDB_USERNAME": "str",
-        "MONGO_INITDB_PASSWORD": "password",
-        "MONGO_INITDB_ROOT_PASSWORD": "password"
-    },
-    "image": "ghcr.io/rummens/hass-mongodb",
-    "map": {
-        "config": {
-            "source": "/mnt/data/mongo",
-            "target": "/data/db",
-            "type": "rw"
-        }
-    },
-    "icon": "icon.png"
+    "share:rw"
+  ],
+  "ports": {
+    "27017/tcp": 27017
+  },
+  "options": {
+    "root_username": "root",
+    "root_password": null,
+    "init_scripts": false
+  },
+  "schema": {
+    "root_username": "str",
+    "root_password": "str",
+    "init_scripts": "bool?"
+  },
+  "startup": "application",
+  "boot": "auto"
 }

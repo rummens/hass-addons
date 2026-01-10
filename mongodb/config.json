@@ -1,7 +1,7 @@
 {
   "name": "MongoDB",
   "description": "MongoDB NoSQL database server.",
-  "version": "8.2.3-4",
+  "version": "8.2.3-5",
   "slug": "mongodb",
   "arch": ["amd64"],
   "map": [
@@ -24,7 +24,7 @@
   },
   "schema": {
     "root_username": "str",
-    "root_password": "str",
+    "root_password": "password",
     "init_scripts": "bool?"
   },
   "startup": "application",

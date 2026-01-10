@@ -3,6 +3,15 @@
 # Log config
 bashio::log.info "Starting MongoDB..."
 
+# Copy init scripts if enabled
+if bashio::config.has_value 'init_scripts'; then
+  bashio::config.true 'init_scripts' && {
+    bashio::log.info "Copying init scripts..."
+    mkdir -p /docker-entrypoint-initdb.d
+    cp /share/*.js /docker-entrypoint-initdb.d/ 2>/dev/null || true
+  }
+fi
+
 # Ensure /share/mongodb exists (bashio handles)
 bashio::log.info "Data path: /data/db (persistent)"
 

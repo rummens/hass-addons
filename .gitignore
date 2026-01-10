@@ -1,2 +1,4 @@
 .DS_Store
 .idea/
+/mongodb/share/
+/mongodb/data/

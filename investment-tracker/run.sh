@@ -1,4 +1,5 @@
-#!/usr/bin/env bashio
+#!/bin/bash
+
 set -e
 echo "Starting Investment Tracker script..."
 

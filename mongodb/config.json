@@ -20,6 +20,6 @@
     "root_password": "password",
     "init_scripts": "bool?"
   },
-  "startup": "service",
+  "startup": "services",
   "boot": "auto"
 }

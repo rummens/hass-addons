@@ -1,3 +1,6 @@
+### Version 8.2.3-8
+fix: remove run.sh
+
 ### Version 8.2.3-7
 fix: force entrypoint4
 

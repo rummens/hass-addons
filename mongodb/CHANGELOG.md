@@ -1,3 +1,6 @@
+### Version 8.2.3-5
+fix: force entrypoint
+
 ### Version 8.2.3-4
 fix: switch to official start script and moved bashio to run.sh
 

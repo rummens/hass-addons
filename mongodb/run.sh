@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 set -e
 
-# bashio env
-export MONGO_INITDB_ROOT_USERNAME=$(bashio::config 'root_username')
-export MONGO_INITDB_ROOT_PASSWORD=$(bashio::config 'root_password')
+CONFIG_PATH="/data/options.json"
 
-echo "Starting MongoDB with root user: $MONGO_INITDB_ROOT_USERNAME and password: $MONGO_INITDB_ROOT_PASSWORD"
+# Parse config with jq
+MONGO_INITDB_ROOT_USERNAME=$(jq -r '.root_username // empty' "$CONFIG_PATH")
+MONGO_INITDB_ROOT_PASSWORD=$(jq -r '.root_password // empty' "$CONFIG_PATH")
+
+if [ -z "$MONGO_INITDB_ROOT_USERNAME" ] || [ -z "$MONGO_INITDB_ROOT_PASSWORD" ]; then
+  echo "Error: root_username and root_password required in $CONFIG_PATH"
+  exit 1
+fi
+
+echo "Configuring MongoDB root: $MONGO_INITDB_ROOT_USERNAME"
+
+export MONGO_INITDB_ROOT_USERNAME MONGO_INITDB_ROOT_PASSWORD
 
 exec docker-entrypoint.sh mongod --bind_ip_all

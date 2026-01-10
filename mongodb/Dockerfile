@@ -14,8 +14,9 @@ RUN mkdir -p /tmp/bashio && \
     ln -s /usr/lib/bashio/bashio /usr/bin/bashio && \
     rm -rf /tmp/bashio /tmp/v${BASHIO_VERSION}.tar.gz
 
+COPY run.sh /run.sh
+RUN chmod a+x /run.sh
+
 EXPOSE 27017
 
-# Use official MongoDB entrypoint
-ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["mongod", "--bind_ip_all"]
+CMD ["/run.sh"]

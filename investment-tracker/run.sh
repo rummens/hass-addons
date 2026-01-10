@@ -14,4 +14,4 @@ export MONGO_DB_CONNECTION_STRING=$(bashio::config 'MONGO_DB_CONNECTION_STRING')
 bashio::log.info "Starting Investment Tracker script..."
 
 # Run your original start script
-exec /app/docker_start_script.sh
+. /app/docker_start_script.sh

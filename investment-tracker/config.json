@@ -1,6 +1,6 @@
 {
   "name": "Investment Tracker",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "slug": "investment-tracker",
   "description": "Investment tracking Python application using MongoDB and external APIs",
   "startup": "services",

@@ -1,0 +1,1 @@
+FROM registry.gitlab.com/rummens/public-registry/investment-tracker:latest

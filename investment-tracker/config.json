@@ -1,12 +1,12 @@
 {
   "name": "Investment Tracker",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "slug": "investment-tracker",
   "description": "Investment tracking Python application using MongoDB and external APIs",
-  "startup": "services",
+  "startup": "application",
   "boot": "auto",
   "arch": ["amd64", "aarch64"],
-  "host_network": true,
+  "init": "false",
   "options": {
     "FINANZBLICK_USERNAME": "",
     "FINANZBLICK_PASSWORD": "",

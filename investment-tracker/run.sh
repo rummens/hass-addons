@@ -1,6 +1,5 @@
-#!/usr/bin/with-contenv bashio
-bashio::log.info "Starting Investment Tracker script..."
-
+#!/usr/bin/env bash
+echo "Running Investment Tracker add-on..."
 set -e
 
 # Export environment variables from HA add-on config
@@ -11,5 +10,7 @@ export ALPHAVANTAGE_API_KEY=$(bashio::config 'ALPHAVANTAGE_API_KEY')
 export SLACK_BOT_TOKEN=$(bashio::config 'SLACK_BOT_TOKEN')
 export MONGO_DB_CONNECTION_STRING=$(bashio::config 'MONGO_DB_CONNECTION_STRING')
 
+bashio::log.info "Starting Investment Tracker script..."
+
 # Run your original app
-. /app/docker_start_script.sh
+exec /app/docker_start_script.sh

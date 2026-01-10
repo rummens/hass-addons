@@ -71,7 +71,7 @@ jobs:
           platforms: linux/arm64,linux/amd64
           push: true
           tags: |
-            ghcr.io/cvele/hass-mongodb:${{ env.VERSION }}
-            ghcr.io/cvele/hass-mongodb:latest
-          cache-from: type=registry,ref=ghcr.io/cvele/hass-mongodb:buildcache
-          cache-to: type=registry,ref=ghcr.io/cvele/hass-mongodb:buildcache,mode=max
+            ghcr.io/rummens/hass-mongodb:${{ env.VERSION }}
+            ghcr.io/rummens/hass-mongodb:latest
+          cache-from: type=registry,ref=ghcr.io/rummens/hass-mongodb:buildcache
+          cache-to: type=registry,ref=ghcr.io/rummens/hass-mongodb:buildcache,mode=max

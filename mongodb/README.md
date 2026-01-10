@@ -19,7 +19,7 @@ This is a Home Assistant addon for running MongoDB. This addon allows you to run
    - Go to the Home Assistant web interface.
    - Navigate to **Supervisor** > **Add-on Store**.
    - Click on the three-dot menu and select **Repositories**.
-   - Add the repository URL: `https://github.com/cvele/hass-addons`.
+   - Add the repository URL: `https://github.com/rummens/hass-addons`.
 
 2. **Install the Add-on**:
    - Find the MongoDB add-on in the list.
@@ -58,7 +58,7 @@ Replace `<your-home-assistant-ip>` with the IP address of your Home Assistant in
 To build the Docker image for this addon, run the following command:
 
 ```sh
-docker build -t ghcr.io/cvele/hass-mongodb:latest mongodb/
+docker build -t ghcr.io/rummens/hass-mongodb:latest mongodb/
 ```
 
 ### Vulnerability Scanning

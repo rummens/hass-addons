@@ -1,5 +1,6 @@
 #!/usr/bin/env bashio
 set -e
+echo "Starting Investment Tracker script..."
 
 # Export all HA add-on options as environment variables
 export FINANZBLICK_USERNAME=$(bashio::config 'FINANZBLICK_USERNAME')

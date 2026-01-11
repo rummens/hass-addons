@@ -1,6 +1,6 @@
 {
   "name": "Investment UI",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "slug": "investment-ui",
   "description": "Investment UI Python application",
   "startup": "application",
@@ -9,7 +9,6 @@
   "init": "false",
   "map": ["addon_config:rw"],
   "ingress": true,
-  "ingress_port": 5005,
   "options": {
     "SECRET_KEY": "",
     "MONGO_DB_CONNECTION_STRING": "",

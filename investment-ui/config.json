@@ -1,6 +1,6 @@
 {
   "name": "Investment UI",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "slug": "investment-ui",
   "description": "Investment UI Python application",
   "startup": "application",
@@ -10,6 +10,7 @@
   "map": ["addon_config:rw"],
   "ingress": true,
   "ingress_port": 5005,
+  "ingress_root": "/",
   "ports": {
     "5005/tcp": 5005
   },

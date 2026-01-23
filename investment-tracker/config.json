@@ -15,7 +15,7 @@
     "SLACK_BOT_TOKEN": "",
     "MONGO_DB_CONNECTION_STRING": "",
     "DEBUG": false,
-    "RUN_OPERATIONS": true
+    "RUN_OPERATIONS": false
   },
   "schema": {
     "FINANZBLICK_USERNAME": "str",

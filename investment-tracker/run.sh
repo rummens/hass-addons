@@ -8,6 +8,7 @@ export FINANZBLICK_PASSWORD=$(bashio::config 'FINANZBLICK_PASSWORD')
 export FINANZBLICK_MFA_SECRET=$(bashio::config 'FINANZBLICK_MFA_SECRET')
 export SLACK_BOT_TOKEN=$(bashio::config 'SLACK_BOT_TOKEN')
 export MONGO_DB_CONNECTION_STRING=$(bashio::config 'MONGO_DB_CONNECTION_STRING')
+export RUN_OPERATIONS=$(bashio::config 'RUN_OPERATIONS')
 export DEBUG=$(bashio::config 'DEBUG')
 
 bashio::log.info "Starting Investment Tracker script..."

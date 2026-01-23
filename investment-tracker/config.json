@@ -1,6 +1,6 @@
 {
   "name": "Investment Tracker",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "slug": "investment-tracker",
   "description": "Investment tracking Python application using MongoDB and external APIs",
   "startup": "application",
@@ -14,7 +14,8 @@
     "FINANZBLICK_MFA_SECRET": "",
     "SLACK_BOT_TOKEN": "",
     "MONGO_DB_CONNECTION_STRING": "",
-    "DEBUG": false
+    "DEBUG": false,
+    "RUN_OPERATIONS": true
   },
   "schema": {
     "FINANZBLICK_USERNAME": "str",
@@ -22,6 +23,7 @@
     "FINANZBLICK_MFA_SECRET": "password",
     "SLACK_BOT_TOKEN": "password",
     "MONGO_DB_CONNECTION_STRING": "password",
-    "DEBUG": "bool"
+    "DEBUG": "bool",
+    "RUN_OPERATIONS": "bool"
   }
 }
